@@ -1,0 +1,24 @@
+{
+	"VsCodeTaskButtons.tasks": [
+		{
+			"label": "⚙️ config",
+			"task": "cmake config",
+			"color": "default"
+		},
+		{
+			"label": "🔨 build",
+			"task": "cmake build",
+			"color": "warning"
+		},
+		{
+			"label": "🧹 clean",
+			"task": "cmake clean",
+			"color": "default"
+		},
+		{
+			"label": "🚀 flash",
+			"task": "flash",
+			"color": "default"
+		}
+	]
+}

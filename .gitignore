@@ -1,0 +1,6 @@
+build/
+
+# Ignore everything in third_party directory
+third_party/*
+# But keep CMakeLists.txt files
+!third_party/CMakeLists.txt

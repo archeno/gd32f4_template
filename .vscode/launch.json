@@ -1,0 +1,42 @@
+// {
+// 	"version": "0.2.0",
+// 	"configurations": [
+// 		{
+// 			"name": "Cortex-Debug",
+// 			"type": "cortex-debug",
+// 			"request": "launch",
+// 			"servertype": "openocd",
+// 			"cwd": "${workspaceRoot}",
+// 			"gdbPath": "d:/msys64/mingw64/bin/arm-none-eabi-gdb.exe",
+// 			"executable": "${workspaceRoot}/build/${workspaceFolderBasename}.elf",
+// 			"device": "GD32F425",
+// 			"configFiles": [
+// 				"interface/stlink.cfg",
+// 				"target/stm32f4x.cfg"
+// 			],
+// 			// "svdFile": "${workspaceRoot}/GD32F4.svd",
+// 		}
+// 	]
+// }
+{
+	"configurations": [
+		{
+			"name": "Debug Microcontroller",
+			"type": "cortex-debug",
+			"request": "launch",
+			"executable": "${workspaceFolder}/build/${workspaceFolderBasename}.elf",
+			"cwd": "${workspaceFolder}",
+			"svdFile": "./GD32F4xx.svd",
+			"gdbPath": "d:/msys64/mingw64/bin/arm-none-eabi-gdb.exe",
+			"liveWatch": {
+				"enabled": true,
+				"samplesPerSecond": 4
+			},
+			// openocd 命令
+			"servertype": "openocd",
+			"configFiles": [
+				"./cmsis-dap.cfg",
+			]
+		}
+	]
+}
